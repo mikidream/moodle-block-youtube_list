@@ -1,0 +1,44 @@
+<table cellpadding="9" cellspacing="0" align="center">
+ <tr valign="top"><td align="right">
+         <?php print_string('loadjquery', 'block_youtube_list'); ?>:
+     </td>
+     <td>
+	 <?php
+         if (isset($this->config) && isset($this->config->block_youtube_list_jquery)) {
+                        $selected = $this->config->block_youtube_list_jquery;
+         } else {
+                       $selected = '1';
+         }
+         $options = array ( '1' => get_string('yes'),
+		 					'0'  => get_string('no') );
+
+         choose_from_menu ($options, 'block_youtube_list_jquery', $selected);
+	 ?>
+	 <p>*<?php print_string('loadjquery_note', 'block_youtube_list'); ?></p>
+     </td>
+ </tr>
+ <tr>
+     <td align="right">
+         <?php print_string('url', 'block_youtube_list'); ?>:
+     </td>
+     <td>
+	 <?php
+	 if (!empty($this->config) && !empty($this->config->block_youtube_list_url)) {
+	 	$url = $this->config->block_youtube_list_url;
+	 }
+	 ?>
+         <input type="text" name="block_youtube_list_url" size="30" value="<?php echo $url; ?>" />
+     </td>
+ </tr>
+ <tr>
+     <td colspan="2" align="center">
+		 <p><?php print_string('moreinformation', 'block_youtube_list'); ?>: <a href="http://www.youtube.com/rssls" target="_blank"><?php print_string('youtubeRssInfo', 'block_youtube_list'); ?></a></p>
+     </td>
+ </tr>
+ <tr>
+     <td colspan="2" align="center">
+         <input type="submit" value="<?php print_string('savechanges') ?>" />
+     </td>
+ </tr>
+ </table>
+ <?php use_html_editor(); ?>
