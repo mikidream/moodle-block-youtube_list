@@ -39,6 +39,23 @@
 		 <p><?php print_string('moreinformation', 'block_youtube_list'); ?>: <a href="http://www.youtube.com/rssls" target="_blank"><?php print_string('youtubeRssInfo', 'block_youtube_list'); ?></a></p>
      </td>
  </tr>
+   <tr valign="top">
+    <td align="right">
+      <?php print_string('configwidth', 'block_jquery_slideshow'); ?>:
+    </td>
+    <td>
+      <input type="text" name="width" size="5" value="<?php if (isset($this->config->width)) { echo $this->config->width; } else { echo '250'; } ?>" />
+    </td>
+  </tr>
+
+  <tr valign="top">
+    <td align="right">
+      <?php print_string('configheight', 'block_jquery_slideshow'); ?>:
+    </td>
+    <td>
+      <input type="text" name="height" size="5" value="<?php if (isset($this->config->height)) { echo $this->config->height; } else { echo '225'; } ?>" />
+    </td>
+  </tr>
  <tr>
      <td colspan="2" align="center">
          <input type="submit" value="<?php print_string('savechanges') ?>" />
