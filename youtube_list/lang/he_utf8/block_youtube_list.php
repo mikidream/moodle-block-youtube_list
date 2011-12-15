@@ -1,6 +1,6 @@
 ﻿<?php
 // translated by Miki Alliel
-$string['formaltitle'] = 'רשימת ההשמעה (playlist) או ערוץ RSS מ-Youtube ';
+$string['formaltitle'] = 'רשימת השמעה של ערוץ מ-Youtube ';
 $string['warning_no_playlist'] = 'לא נמצאו רשימות השמעה.';
 $string['warning_no_videos'] = 'לא התווספו סרטונים לרשימת השמעה זו.';
 $string['selectvideo'] = 'בחר סרטון';
